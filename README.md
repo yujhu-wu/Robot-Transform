@@ -1,6 +1,6 @@
 # Robot Transform
 
-用 **C++/OpenGL(GLUT)** 製作的3D階層式機器人動畫。  
+用**C++/OpenGL**(GLUT)製作的3D階層式機器人動畫。  
 機器人由頭、軀幹、上下手臂、上下腿等部件組成，每個關節都能獨立轉動；透過右鍵選單可以讓機器人立正、走路、跳舞、歡呼和揮手打招呼。
 
 ![歡呼動作](screenshots/hurray.png)
@@ -29,10 +29,10 @@
 
 ## 實作重點
 
-- **階層式模型(Hierarchical Model)**：以 `glPushMatrix()` / `glPopMatrix()` 串接軀幹→上臂→前臂、軀幹→大腿→小腿的座標轉換，父部件轉動時子部件會跟著移動。
-- **關節角度陣列**：用 `theta[]`、`atheta[]` 記錄每個關節的角度，各動作只需設定不同的關節角度組合。
-- **計時器動畫**：以 `glutTimerFunc()` 每 33 ms 更新一次畫面，依計數器切換關鍵姿勢，產生連續動作。
-- **GLU/GLUT 幾何物件**：身體以 `gluCylinder()`、`gluSphere()` 組成，臉部的眼睛、鼻子（圓錐）、嘴巴（立方體）讓機器人更有表情。
+- **階層式模型(Hierarchical Model)**：以`glPushMatrix()` / `glPopMatrix()`串接軀幹→上臂→前臂、軀幹→大腿→小腿的座標轉換，父部件轉動時子部件會跟著移動。
+- **關節角度陣列**：用`theta[]`、`atheta[]`記錄每個關節的角度，各動作只需設定不同的關節角度組合。
+- **計時器動畫**：以`glutTimerFunc()`每33 ms更新一次畫面，依計數器切換關鍵姿勢，產生連續動作。
+- **GLU/GLUT幾何物件**：身體以`gluCylinder()`、`gluSphere()`組成，臉部的眼睛、鼻子(圓錐)、嘴巴(立方體)讓機器人更有表情。
 
 ## 執行畫面
 
@@ -46,4 +46,4 @@
 
 ## 編譯與執行
 
-**Windows(Code::Blocks + freeglut)**：建立GLUT專案，加入 `src/main.cpp`，連結 `freeglut`、`opengl32`、`glu32` 後編譯執行。
+**Windows(Code::Blocks + freeglut)**：建立GLUT專案，加入`src/main.cpp`，連結`freeglut`、`opengl32`、`glu32`後編譯執行。
